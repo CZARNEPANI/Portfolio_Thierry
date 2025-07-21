@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thierry de Morais Gomes | Desenvolvedor Web</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Configuração customizada do Tailwind e Estilos Globais -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 (Azul Escuro) */
+            color: #e2e8f0; /* slate-200 (Texto Claro) */
+        }
+        /* Cor de destaque */
+        .accent-color {
+            color: #6366f1; /* indigo-500 */
+        }
+        .bg-accent-color {
+            background-color: #4f46e5; /* indigo-600 */
+        }
+        .hover\:bg-accent-hover:hover {
+            background-color: #4338ca; /* indigo-700 */
+        }
+        .border-accent-color {
+            border-color: #4f46e5; /* indigo-600 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">
+                Thierry<span class="accent-color">.</span>dev
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" id="nav-home" class="text-slate-300 hover:accent-color transition-colors duration-300">Início</a>
+                <a href="#projects" id="nav-projects" class="text-slate-300 hover:accent-color transition-colors duration-300">Projetos</a>
+                <a href="#about" id="nav-about" class="text-slate-300 hover:accent-color transition-colors duration-300">Sobre</a>
+                <a href="#contact" id="nav-contact" class="text-slate-300 hover:accent-color transition-colors duration-300">Contato</a>
+                <!-- Seletor de Idioma -->
+                <div class="relative" id="language-switcher">
+                    <button id="language-button" class="flex items-center gap-2 text-slate-300 hover:accent-color transition-colors duration-300">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                        <span id="current-lang-text">Português</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </button>
+                    <div id="language-dropdown" class="absolute top-full right-0 mt-2 w-40 bg-slate-800 border border-slate-700 rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-700" data-lang="pt">Português</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-700" data-lang="en">English</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-700" data-lang="es">Español</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-700" data-lang="pl">Polski</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" id="hire-me-button" class="hidden md:block bg-accent-color text-white px-4 py-2 rounded-md hover:bg-accent-hover transition-colors duration-300">
+                Contrate-me
+            </a>
+        </nav>
+    </header>
+
+    <!-- CORPO PRINCIPAL DA PÁGINA -->
+    <main class="container mx-auto px-6">
+
+        <!-- SEÇÃO INICIAL (HERO) -->
+        <section id="home" class="min-h-[80vh] flex items-center py-20">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Thierry de Morais Gomes
+                </h1>
+                <h2 id="hero-subtitle" class="text-2xl md:text-3xl font-medium accent-color mt-2">
+                    Desenvolvedor Web & Analista de Sistemas
+                </h2>
+                <p id="hero-description" class="mt-6 text-lg text-slate-300">
+                    Tenho 25 anos e moro em Sorocaba-SP. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na Anhanguera, buscando ativamente minha primeira oportunidade na área de tecnologia. Sou apaixonado por criar soluções inovadoras e busco uma carreira que me permita crescer no Brasil e no exterior.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects" id="hero-btn-projects" class="bg-accent-color text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-accent-hover transition-transform duration-300 hover:scale-105">
+                        Ver Meus Projetos
+                    </a>
+                    <a href="#contact" id="hero-btn-contact" class="border-2 border-slate-600 text-slate-200 px-8 py-3 rounded-md text-lg font-semibold hover:bg-slate-800 hover:border-slate-500 transition-all duration-300">
+                        Entrar em Contato
+                    </a>
+                </div>
+            </div>
+            <img src="https://scontent.fvcp10-1.fna.fbcdn.net/v/t39.30808-6/433600597_3368135963483939_7653485949706909397_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFjrlaUQb_hCOMRySTTNjrTHaFJp9lppkIdoUmn2WmmQpZvCjZqh4Js3BOcIVGCo-xOlg9YuP5qNtryeYGf5WMe&_nc_ohc=qISHPHRtfOYQ7kNvwH3t_oq&_nc_oc=AdnqjYW4SR3QISc2CqkDoLQIXo5k6W1KnjhEKEO9OYsEuAVOOl534G-TqbpZoI12L9s&_nc_zt=23&_nc_ht=scontent.fvcp10-1.fna&_nc_gid=LkS4VONyoCg1nbTtVqJ8xA&oh=00_AfQBCGLOw6y-ALelOjiuIOcam9nrJy7f-lq6vUQIVOA2cA&oe=6883FA79" alt="foto de Thierry" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-sky-500/50 shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE PROJETOS -->
+        <section id="projects" class="py-20">
+            <h2 id="projects-title" class="text-3xl md:text-4xl font-bold text-center text-white">Meus Projetos</h2>
+            <p id="projects-subtitle" class="text-center text-slate-400 mt-2 max-w-2xl mx-auto">
+                Aqui estão alguns projetos que desenvolvi para praticar e aprimorar minhas habilidades.
+            </p>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-800 border border-slate-700 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 group">
+                    <img src="https://placehold.co/600x400/1e293b/94a3b8?text=Landing+Page" alt="Imagem do projeto Landing Page" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 id="project1-title" class="text-xl font-semibold text-slate-100">Landing Page Responsiva</h3>
+                        <p id="project1-desc" class="mt-2 text-slate-400">Uma página de captura para um produto fictício, construída com foco em design responsivo e semântica HTML.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-slate-700 text-slate-300 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                            <span class="bg-slate-700 text-slate-300 text-sm font-medium px-3 py-1 rounded-full">CSS3</span>
+                            <span class="bg-slate-700 text-slate-300 text-sm font-medium px-3 py-1 rounded-full">Flexbox</span>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <a href="#" class="text-white bg-accent-color px-4 py-2 rounded-md hover:bg-accent-hover transition-colors project-demo-btn">Ver Demo</a>
+                            <a href="#" class="text-slate-300 border border-slate-600 px-4 py-2 rounded-md hover:bg-slate-700 transition-colors project-code-btn">Código Fonte</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 group">
+                    <img src="https://placehold.co/600x400/1e293b/94a3b8?text=API+Simples" alt="Imagem do projeto API Simples" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 id="project2-title" class="text-xl font-semibold text-slate-100">API de Tarefas com Flask</h3>
+                        <p id="project2-desc" class="mt-2 text-slate-400">Um sistema de back-end simples para gerenciar uma lista de tarefas (To-Do), com endpoints para criar, ler, atualizar e deletar.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Flask</span>
+                            <span class="bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">REST API</span>
+                        </div>
+                         <div class="mt-6 flex gap-4">
+                            <a href="#" class="text-slate-500 bg-slate-700 px-4 py-2 rounded-md cursor-not-allowed project-no-demo-btn">Sem Demo</a>
+                            <a href="#" class="text-slate-300 border border-slate-600 px-4 py-2 rounded-md hover:bg-slate-700 transition-colors project-code-btn">Código Fonte</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 group">
+                    <img src="https://placehold.co/600x400/1e293b/94a3b8?text=Calculadora+JS" alt="Imagem do projeto Calculadora com JS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 id="project3-title" class="text-xl font-semibold text-slate-100">Calculadora com JavaScript</h3>
+                        <p id="project3-desc" class="mt-2 text-slate-400">Uma calculadora funcional desenvolvida para praticar a lógica de programação e a manipulação do DOM com JavaScript puro.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-yellow-900/50 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-yellow-900/50 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                            <span class="bg-yellow-900/50 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full">CSS3</span>
+                        </div>
+                         <div class="mt-6 flex gap-4">
+                            <a href="#" class="text-white bg-accent-color px-4 py-2 rounded-md hover:bg-accent-hover transition-colors project-demo-btn">Ver Demo</a>
+                            <a href="#" class="text-slate-300 border border-slate-600 px-4 py-2 rounded-md hover:bg-slate-700 transition-colors project-code-btn">Código Fonte</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE MIM E CURRÍCULO -->
+        <section id="about" class="py-20 bg-slate-800/50 rounded-lg my-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 id="about-title" class="text-3xl md:text-4xl font-bold text-white">Sobre Mim</h2>
+                <div class="prose prose-invert prose-lg text-slate-300 mx-auto mt-6">
+                    <p id="about-p1">Desde que iniciei meus estudos em Análise e Desenvolvimento de Sistemas, mergulhei no universo da programação com grande entusiasmo. Tenho um perfil proativo, gosto de resolver problemas e estou sempre aprendendo novas tecnologias. Minha fluência em <strong>Português, Inglês e Espanhol</strong>, e o aprendizado de <strong>Polonês</strong>, refletem meu desejo de me conectar com pessoas e projetos globais.</p>
+                    <p id="about-p2">Busco uma oportunidade onde eu possa aplicar meu conhecimento, contribuir para projetos desafiadores e crescer profissionalmente ao lado de uma equipe talentosa.</p>
+                </div>
+                <a href="#" id="about-cv-btn" class="mt-8 inline-block bg-accent-color text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-accent-hover transition-transform duration-300 hover:scale-105">
+                    Download do Meu Currículo (PDF)
+                </a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO -->
+        <section id="contact" class="py-20">
+            <div class="text-center">
+                <h2 id="contact-title" class="text-3xl md:text-4xl font-bold text-white">Vamos Conversar?</h2>
+                <p id="contact-subtitle" class="text-slate-400 mt-2 max-w-xl mx-auto">
+                    Estou disponível para novos projetos e oportunidades. Sinta-se à vontade para entrar em contato.
+                </p>
+                <div class="mt-8 flex justify-center items-center gap-6 md:gap-10">
+                    <a href="mailto:thierrygomes85@gmail.com" class="group flex flex-col items-center gap-2 text-slate-400 hover:accent-color transition-colors">
+                        <i data-lucide="mail" class="w-10 h-10"></i>
+                        <span class="font-medium">E-mail</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thierrygomes/" target="_blank" class="group flex flex-col items-center gap-2 text-slate-400 hover:accent-color transition-colors">
+                        <i data-lucide="linkedin" class="w-10 h-10"></i>
+                        <span class="font-medium">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/CZARNEPANI" target="_blank" class="group flex flex-col items-center gap-2 text-slate-400 hover:accent-color transition-colors">
+                        <i data-lucide="github" class="w-10 h-10"></i>
+                        <span class="font-medium">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-slate-800 text-slate-400 mt-20 border-t border-slate-700">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <p id="footer-text">&copy; 2025 Thierry de Morais Gomes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para ícones e lógica de tradução -->
+    <script>
+      lucide.createIcons();
+
+      // Lógica de Tradução
+      const translations = {
+        'pt': {
+          'nav-home': 'Início',
+          'nav-projects': 'Projetos',
+          'nav-about': 'Sobre',
+          'nav-contact': 'Contato',
+          'current-lang-text': 'Português',
+          'hire-me-button': 'Contrate-me',
+          'hero-subtitle': 'Desenvolvedor Web & Analista de Sistemas',
+          'hero-description': 'Tenho 25 anos e moro em Sorocaba-SP. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na Anhanguera, buscando ativamente minha primeira oportunidade na área de tecnologia. Sou apaixonado por criar soluções inovadoras e busco uma carreira que me permita crescer no Brasil e no exterior.',
+          'hero-btn-projects': 'Ver Meus Projetos',
+          'hero-btn-contact': 'Entrar em Contato',
+          'projects-title': 'Meus Projetos',
+          'projects-subtitle': 'Aqui estão alguns projetos que desenvolvi para praticar e aprimorar minhas habilidades.',
+          'project1-title': 'Landing Page Responsiva',
+          'project1-desc': 'Uma página de captura para um produto fictício, construída com foco em design responsivo e semântica HTML.',
+          'project2-title': 'API de Tarefas com Flask',
+          'project2-desc': 'Um sistema de back-end simples para gerenciar uma lista de tarefas (To-Do), com endpoints para criar, ler, atualizar e deletar.',
+          'project3-title': 'Calculadora com JavaScript',
+          'project3-desc': 'Uma calculadora funcional desenvolvida para praticar a lógica de programação e a manipulação do DOM com JavaScript puro.',
+          'project-demo-btn': 'Ver Demo',
+          'project-code-btn': 'Código Fonte',
+          'project-no-demo-btn': 'Sem Demo',
+          'about-title': 'Sobre Mim',
+          'about-p1': 'Desde que iniciei meus estudos em Análise e Desenvolvimento de Sistemas, mergulhei no universo da programação com grande entusiasmo. Tenho um perfil proativo, gosto de resolver problemas e estou sempre aprendendo novas tecnologias. Minha fluência em <strong>Português, Inglês e Espanhol</strong>, e o aprendizado de <strong>Polonês</strong>, refletem meu desejo de me conectar com pessoas e projetos globais.',
+          'about-p2': 'Busco uma oportunidade onde eu possa aplicar meu conhecimento, contribuir para projetos desafiadores e crescer profissionalmente ao lado de uma equipe talentosa.',
+          'about-cv-btn': 'Download do Meu Currículo (PDF)',
+          'contact-title': 'Vamos Conversar?',
+          'contact-subtitle': 'Estou disponível para novos projetos e oportunidades. Sinta-se à vontade para entrar em contato.',
+          'footer-text': '© 2025 Thierry de Morais Gomes. Todos os direitos reservados.'
+        },
+        'en': {
+          'nav-home': 'Home',
+          'nav-projects': 'Projects',
+          'nav-about': 'About',
+          'nav-contact': 'Contact',
+          'current-lang-text': 'English',
+          'hire-me-button': 'Hire Me',
+          'hero-subtitle': 'Web Developer & Systems Analyst',
+          'hero-description': 'I am 25 years old and live in Sorocaba-SP. I am currently studying Systems Analysis and Development at Anhanguera, actively seeking my first opportunity in the technology field. I am passionate about creating innovative solutions and I am looking for a career that allows me to grow in Brazil and abroad.',
+          'hero-btn-projects': 'See My Projects',
+          'hero-btn-contact': 'Get in Touch',
+          'projects-title': 'My Projects',
+          'projects-subtitle': 'Here are some projects I have developed to practice and improve my skills.',
+          'project1-title': 'Responsive Landing Page',
+          'project1-desc': 'A landing page for a fictional product, built with a focus on responsive design and HTML semantics.',
+          'project2-title': 'Task API with Flask',
+          'project2-desc': 'A simple back-end system to manage a to-do list, with endpoints to create, read, update, and delete.',
+          'project3-title': 'JavaScript Calculator',
+          'project3-desc': 'A functional calculator developed to practice programming logic and DOM manipulation with pure JavaScript.',
+          'project-demo-btn': 'View Demo',
+          'project-code-btn': 'Source Code',
+          'project-no-demo-btn': 'No Demo',
+          'about-title': 'About Me',
+          'about-p1': 'Since I started my studies in Systems Analysis and Development, I have dived into the world of programming with great enthusiasm. I have a proactive profile, I like to solve problems and I am always learning new technologies. My fluency in <strong>Portuguese, English, and Spanish</strong>, and learning <strong>Polish</strong>, reflect my desire to connect with people and projects globally.',
+          'about-p2': 'I am looking for an opportunity where I can apply my knowledge, contribute to challenging projects, and grow professionally alongside a talented team.',
+          'about-cv-btn': 'Download My Resume (PDF)',
+          'contact-title': 'Let\'s Talk?',
+          'contact-subtitle': 'I am available for new projects and opportunities. Feel free to get in touch.',
+          'footer-text': '© 2025 Thierry de Morais Gomes. All rights reserved.'
+        },
+        'es': {
+          'nav-home': 'Inicio',
+          'nav-projects': 'Proyectos',
+          'nav-about': 'Sobre mí',
+          'nav-contact': 'Contacto',
+          'current-lang-text': 'Español',
+          'hire-me-button': 'Contrátame',
+          'hero-subtitle': 'Desarrollador Web y Analista de Sistemas',
+          'hero-description': 'Tengo 25 años y vivo en Sorocaba-SP. Actualmente estudio Análisis y Desarrollo de Sistemas en Anhanguera, buscando activamente mi primera oportunidad en el área de tecnología. Me apasiona crear soluciones innovadoras y busco una carrera que me permita crecer en Brasil y en el extranjero.',
+          'hero-btn-projects': 'Ver Mis Proyectos',
+          'hero-btn-contact': 'Contactar',
+          'projects-title': 'Mis Proyectos',
+          'projects-subtitle': 'Aquí hay algunos proyectos que he desarrollado para practicar y mejorar mis habilidades.',
+          'project1-title': 'Landing Page Responsiva',
+          'project1-desc': 'Una página de captura para un producto ficticio, construida con un enfoque en el diseño responsivo y la semántica HTML.',
+          'project2-title': 'API de Tareas con Flask',
+          'project2-desc': 'Un sistema de back-end simple para administrar una lista de tareas (To-Do), con endpoints para crear, leer, actualizar y eliminar.',
+          'project3-title': 'Calculadora con JavaScript',
+          'project3-desc': 'Una calculadora funcional desarrollada para practicar la lógica de programación y la manipulación del DOM con JavaScript puro.',
+          'project-demo-btn': 'Ver Demo',
+          'project-code-btn': 'Código Fuente',
+          'project-no-demo-btn': 'Sin Demo',
+          'about-title': 'Sobre Mí',
+          'about-p1': 'Desde que comencé mis estudios en Análisis y Desarrollo de Sistemas, me he sumergido en el mundo de la programación con gran entusiasmo. Tengo un perfil proactivo, me gusta resolver problemas y siempre estoy aprendiendo nuevas tecnologías. Mi fluidez en <strong>portugués, inglés y español</strong>, y el aprendizaje de <strong>polaco</strong>, reflejan mi deseo de conectarme con personas y proyectos globales.',
+          'about-p2': 'Busco una oportunidad donde pueda aplicar mis conocimientos, contribuir a proyectos desafiantes y crecer profesionalmente junto a un equipo talentoso.',
+          'about-cv-btn': 'Descargar Mi CV (PDF)',
+          'contact-title': '¿Hablamos?',
+          'contact-subtitle': 'Estoy disponible para nuevos proyectos y oportunidades. No dudes en ponerte en contacto.',
+          'footer-text': '© 2025 Thierry de Morais Gomes. Todos los derechos reservados.'
+        },
+        'pl': {
+          'nav-home': 'Start',
+          'nav-projects': 'Projekty',
+          'nav-about': 'O mnie',
+          'nav-contact': 'Kontakt',
+          'current-lang-text': 'Polski',
+          'hire-me-button': 'Zatrudnij mnie',
+          'hero-subtitle': 'Web Developer & Analityk Systemów',
+          'hero-description': 'Mam 25 lat i mieszkam w Sorocaba-SP. Obecnie studiuję Analizę i Rozwój Systemów w Anhanguera, aktywnie szukając pierwszej pracy w branży technologicznej. Pasjonuje mnie tworzenie innowacyjnych rozwiązań i szukam kariery, która pozwoli mi rozwijać się w Brazylii i za granicą.',
+          'hero-btn-projects': 'Zobacz Moje Projekty',
+          'hero-btn-contact': 'Skontaktuj się',
+          'projects-title': 'Moje Projekty',
+          'projects-subtitle': 'Oto kilka projektów, które opracowałem, aby ćwiczyć i doskonalić swoje umiejętności.',
+          'project1-title': 'Responsywna Strona Docelowa',
+          'project1-desc': 'Strona docelowa dla fikcyjnego produktu, zbudowana z naciskiem na responsywny design i semantykę HTML.',
+          'project2-title': 'API Zadań we Flasku',
+          'project2-desc': 'Prosty system back-end do zarządzania listą zadań (To-Do), z punktami końcowymi do tworzenia, odczytu, aktualizacji i usuwania.',
+          'project3-title': 'Kalkulator w JavaScript',
+          'project3-desc': 'Funkcjonalny kalkulator opracowany w celu ćwiczenia logiki programowania i manipulacji DOM za pomocą czystego JavaScript.',
+          'project-demo-btn': 'Zobacz Demo',
+          'project-code-btn': 'Kod Źródłowy',
+          'project-no-demo-btn': 'Brak Demo',
+          'about-title': 'O Mnie',
+          'about-p1': 'Odkąd rozpocząłem studia na kierunku Analiza i Rozwój Systemów, z wielkim entuzjazmem zagłębiłem się w świat programowania. Mam proaktywny profil, lubię rozwiązywać problemy i ciągle uczę się nowych technologii. Moja biegłość w języku <strong>portugalskim, angielskim i hiszpańskim</strong> oraz nauka języka <strong>polskiego</strong> odzwierciedlają moje pragnienie nawiązywania kontaktów z ludźmi i projektami na całym świecie.',
+          'about-p2': 'Szukam możliwości, w której będę mógł zastosować swoją wiedzę, przyczynić się do ambitnych projektów i rozwijać się zawodowo u boku utalentowanego zespołu.',
+          'about-cv-btn': 'Pobierz Moje CV (PDF)',
+          'contact-title': 'Porozmawiajmy?',
+          'contact-subtitle': 'Jestem dostępny do nowych projektów i możliwości. Zapraszam do kontaktu.',
+          'footer-text': '© 2025 Thierry de Morais Gomes. Wszelkie prawa zastrzeżone.'
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const langSwitcher = document.getElementById('language-switcher');
+        const langButton = document.getElementById('language-button');
+        const langDropdown = document.getElementById('language-dropdown');
+        
+        // Abrir/fechar dropdown
+        langButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+
+        // Fechar dropdown ao clicar fora
+        document.addEventListener('click', () => {
+            if (!langDropdown.classList.contains('hidden')) {
+                langDropdown.classList.add('hidden');
+            }
+        });
+
+        // Mudar o idioma
+        langDropdown.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                const lang = e.target.getAttribute('data-lang');
+                setLanguage(lang);
+            }
+        });
+
+        function setLanguage(lang) {
+            const langData = translations[lang];
+            if (!langData) return;
+
+            // Traduz elementos com ID
+            for (const key in langData) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.innerHTML = langData[key];
+                }
+            }
+            
+            // Traduz elementos com classes (para botões repetidos)
+            document.querySelectorAll('.project-demo-btn').forEach(btn => btn.innerHTML = langData['project-demo-btn']);
+            document.querySelectorAll('.project-code-btn').forEach(btn => btn.innerHTML = langData['project-code-btn']);
+            document.querySelectorAll('.project-no-demo-btn').forEach(btn => btn.innerHTML = langData['project-no-demo-btn']);
+            
+            // Atualiza o atributo lang da tag html
+            document.documentElement.lang = lang;
+        }
+      });
+    </script>
+</body>
+</html>
